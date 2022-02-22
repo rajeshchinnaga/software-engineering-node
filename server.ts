@@ -5,14 +5,15 @@ import express, {Request, Response} from 'express';
 import UserController from "./controllers/UserController";
 import TuitController from "./controllers/TuitController";
 import mongoose from "mongoose";
+import BookmarkController from "./controllers/BookmarkController";
 
 // connect to the database
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = process.env.DB_PASSWORD;
-const connectionString = `mongodb+srv://adarsh:Adarsh=97@softwareeng.ueqhd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+// const connectionString = `mongodb+srv://adarsh:Adarsh=97@softwareeng.ueqhd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 mongoose.connect(
-    connectionString
-    // "mongodb://localhost:27017/Tuiter"
+    // connectionString
+    "mongodb://localhost:27017/Tuiter"
 );
 
 // create RESTful Web service API
@@ -27,6 +28,7 @@ app.get('/add/:a/:b', (req: Request, res: Response) =>
 
 const userController = UserController.getInstance(app);
 const tuitController = TuitController.getInstance(app);
+const bookmarkController = BookmarkController.getInstance(app);
 
 const PORT = 4000;
 app.listen(process.env.PORT || PORT);
