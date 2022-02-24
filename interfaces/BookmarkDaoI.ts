@@ -6,7 +6,7 @@ import Bookmark from "../models/Bookmark";
 export default interface BookmarkDaoI {
     userBookmarksTuit (tuitId: string, userId: string): Promise<any>;
     userUnbookmarksTuit (tuitId: string, userId: string): Promise<any>;
-    findTuitsBookmarkedByUser (uid: string): Promise<Bookmark[]>;
-    findUsersBookmarkATuit (tuitId: string): Promise<Bookmark[]>;
+    findAllTuitsBookmarkedByUser (userId: string): Promise<Bookmark[]>;
+    findAllUsersWhoBookmarkedTuit (tuitId: string): Promise<Bookmark[]>;
     findAllBookmarkedTuits (): Promise<Bookmark[]>;
 };
