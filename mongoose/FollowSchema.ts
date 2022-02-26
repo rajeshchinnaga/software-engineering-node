@@ -1,3 +1,6 @@
+/**
+ * @file Defines mongoose schema for documents in the follows collection
+ */
 import mongoose, {Schema} from "mongoose";
 import Follow from "../models/Follow";
 

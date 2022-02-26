@@ -1,3 +1,6 @@
+/**
+ * @file Defines mongoose schema for documents in the users collection.
+ */
 import mongoose from "mongoose";
 const UserSchema = new mongoose.Schema({
     username: {type: String, required: true},
