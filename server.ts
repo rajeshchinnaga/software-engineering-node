@@ -26,7 +26,7 @@ var cors = require('cors')
 // connect to the database
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = process.env.DB_PASSWORD;
-const connectionString = `mongodb+srv://adarsh:Adarsh=97@softwareeng.ueqhd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const connectionString = `mongodb+srv://adarsh:Adarsh=97@software-engg.8s8gk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 mongoose.connect(
     connectionString
     // "mongodb://localhost:27017/Tuiter"
