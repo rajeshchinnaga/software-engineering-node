@@ -22,7 +22,6 @@ import FollowController from "./controllers/FollowController";
 import MessageController from "./controllers/MessageController";
 import LikeController from "./controllers/LikeController";
 
-var cors = require('cors')
 // connect to the database
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = process.env.DB_PASSWORD;
@@ -35,7 +34,6 @@ mongoose.connect(
 // create RESTful Web service API
 const app = express();
 app.use(express.json());
-app.use(cors());
 
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!'));
