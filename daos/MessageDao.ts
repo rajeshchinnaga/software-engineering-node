@@ -68,6 +68,6 @@ export default class MessageDao implements MessageDaoI {
      * @param {Message} message Instance to be inserted into the database
      * @returns Promise To be notified when message instance is inserted into the database
      */
-    userSendsMessage = async (message: Message, uid1:string, uid2: string) : Promise<Message> =>
+    userSendsMessage = async (message: string, uid1:string, uid2: string) : Promise<Message> =>
         MessageModel.create({message: message, sentBy:uid1, sentTo:uid2});
 };
