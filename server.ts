@@ -22,7 +22,6 @@ import FollowController from "./controllers/FollowController";
 import MessageController from "./controllers/MessageController";
 import LikeController from "./controllers/LikeController";
 import bodyParser from "body-parser";
-var cors = require('cors')
 // connect to the database
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = process.env.DB_PASSWORD;
@@ -33,12 +32,14 @@ mongoose.connect(
 );
 
 // create RESTful Web service API
+var cors = require('cors')
 const app = express();
-app.use(cors())
-app.use(express.json());
+app.use(bodyParser.json())
+app.use(cors()) //added
 
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!'));
+
 
 // Create RESTful Web service API
 app.get('/add/:a/:b', (req: Request, res: Response) =>
