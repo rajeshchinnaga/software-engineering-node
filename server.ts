@@ -26,9 +26,6 @@ import bodyParser from "body-parser";
 // create RESTful Web service API
 var cors = require('cors')
 const app = express();
-// connect to the database
-const DB_USERNAME = process.env.DB_USERNAME;
-const DB_PASSWORD = process.env.DB_PASSWORD;
 const connectionString = `mongodb+srv://adarsh:Adarsh=97@software-engg.8s8gk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 mongoose.connect(connectionString);
 app.use(bodyParser.json())
