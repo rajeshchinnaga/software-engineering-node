@@ -28,8 +28,8 @@ var cors = require('cors')
 const app = express();
 const connectionString = `mongodb+srv://adarsh:Adarsh=97@software-engg.8s8gk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 mongoose.connect(connectionString);
-app.use(bodyParser.json())
-app.use(cors()) //added
+app.use(express.json());
+app.use(cors()); //added
 
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!'));
