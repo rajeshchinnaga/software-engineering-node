@@ -142,10 +142,4 @@ export default class UserController implements UserControllerI {
             .then(user => {
                 res.json(user)
             });
-
-    // register = (req: Request, res: Response) =>
-    //     UserController.userDao.findUserByUsername(req.body.username)
-    //         .then(user => {
-    //
-    //         })
 };
